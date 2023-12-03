@@ -4,9 +4,7 @@ import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @author: RainDown
@@ -55,5 +53,21 @@ public class MoreSyncThread<T,R> {
         // 关闭ExecutorService
         executorService.shutdown();
         return finalResultList;
+    }
+
+    public  static  void  getNextValue(String str){
+        ThreadPoolExecutor pool = new ThreadPoolExecutor(5,
+                15, 2, TimeUnit.SECONDS, new ArrayBlockingQueue(10000),new ThreadPoolExecutor.AbortPolicy());
+        pool.execute(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(str);
+            }
+        });
+        pool.shutdown();
+    }
+
+    public static void main(String[] args) {
+        getNextValue("str");
     }
 }
