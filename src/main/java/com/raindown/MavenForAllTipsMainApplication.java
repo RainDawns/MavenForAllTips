@@ -13,13 +13,14 @@ import java.util.HashMap;
 
 /**
  * @author: RainDown
- * @description: TODO
+ * @description:
  * @date: 2023/3/25 20:42
  * @version: 1.0
  */
 public class MavenForAllTipsMainApplication {
+
     public static void main(String[] args) {
-//        File file=new File("music.mp3");
+/*//        File file=new File("music.mp3");*/
 //        FileInputStream stream= null;
 //        try {
 //            stream = new FileInputStream(file);
@@ -49,7 +50,7 @@ public class MavenForAllTipsMainApplication {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-//        System.out.println(result);
+        System.out.println(result);
         JSONArray data = result.getJSONArray("data");
         System.out.println(data.size());
         BigDecimal money = BigDecimal.ZERO;

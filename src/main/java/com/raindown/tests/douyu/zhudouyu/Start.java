@@ -1,4 +1,4 @@
-package com.raindown.tests.douyu;
+package com.raindown.tests.douyu.zhudouyu;
 
 
 import java.util.concurrent.Executors;
@@ -16,13 +16,13 @@ public class Start {
     private static Runnable task;
 
     public static void main(String[] args) {
-        ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+        ScheduledExecutorService executorService = Executors.newScheduledThreadPool(20);
 
         RequestTaskDouYu task = new RequestTaskDouYu();
         long min=1000*60;
         long hour=1000*60*60;
         long initialDelay = 0; // 初始延迟时间（单位：秒）
-        int period = 1000*1; // 任务执行的周期间隔（单位：秒）
+        int period = 400; // 任务执行的周期间隔（单位：秒）
 
         executorService.scheduleAtFixedRate(task, initialDelay, period, TimeUnit.MILLISECONDS);
         while (true){

@@ -1,6 +1,8 @@
 package com.raindown.algorithm.tree;
 
 
+import java.util.LinkedHashMap;
+
 /**
  * @author: RainDown
  * @description: 平衡二叉树:左右子树
@@ -18,6 +20,7 @@ public class AVLTree {
 
     public static void main(String[] args) {
         System.out.println(Runtime.getRuntime().availableProcessors());
+        LinkedHashMap<Object, Object> hashMap = new LinkedHashMap<>();
 
 
     }

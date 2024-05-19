@@ -32,8 +32,8 @@ public class MoreSyncThread<T,R> {
         for (List<T> batch : partition) {
             // 创建CompletableFuture对象
             CompletableFuture<List<R>> listCompletableFuture = CompletableFuture.supplyAsync(() -> {
-                List<R> strings = function.apply(batch);
-                return strings;
+                List<R> result = function.apply(batch);
+                return result;
             }, executorService).whenComplete((resultList, throwable) -> {
                 if (throwable != null) {
                     // 处理异常
@@ -69,5 +69,6 @@ public class MoreSyncThread<T,R> {
 
     public static void main(String[] args) {
         getNextValue("str");
+        ConcurrentHashMap<Object, Object> objectObjectConcurrentHashMap = new ConcurrentHashMap<>();
     }
 }

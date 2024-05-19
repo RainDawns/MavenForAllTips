@@ -42,7 +42,9 @@ public class OkHttpUtils {
 
         try (Response response = client.newCall(request).execute()) {
             if (response.isSuccessful()) {
-                return JSON.parseObject(response.body().string());
+                String str = response.body().string();
+                response.close();
+                return JSON.parseObject(str);
             } else {
                 throw new IOException("Unexpected response code: " + response.code());
             }
@@ -66,13 +68,18 @@ public class OkHttpUtils {
                 .url(url)
                 .post(requestBody)
                 .build();
-
-        try (Response response = client.newCall(request).execute()) {
+        Response response=null;
+        try {
+            response = client.newCall(request).execute();
             if (response.isSuccessful()) {
-                return JSON.parseObject(response.body().string());
+                String str = response.body().string();
+                return JSON.parseObject(str);
             } else {
                 throw new IOException("Unexpected response code: " + response.code());
             }
+        } finally {
+            response.body().close();
+            response.close();
         }
     }
 }
