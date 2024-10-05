@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 
 /**
  * @author: RainDown
- * @description: TODO
  * @date: 2023/4/9 0:13
  * @version: 1.0
  */
 public class AllList {
 
     public static void main(String[] args) {
+
 
         UserDO.UserDOBuilder userDOBuilder = UserDO.builder().userId("U100").userName("test");
         UserDO user = userDOBuilder.build();

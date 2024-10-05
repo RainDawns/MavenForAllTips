@@ -1,4 +1,4 @@
-package com.raindown.tests.hotdog;
+package com.raindown.tests.sciprt.hotdog;
 
 
 import java.util.concurrent.Executors;

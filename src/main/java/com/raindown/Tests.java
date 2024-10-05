@@ -4,7 +4,7 @@ package com.raindown;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.raindown.tests.hotdog.OkHttpUtils;
+import com.raindown.tests.sciprt.hotdog.OkHttpUtils;
 import okhttp3.Headers;
 
 import java.io.IOException;

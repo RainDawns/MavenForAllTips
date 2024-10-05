@@ -1,4 +1,4 @@
-package com.raindown.tests.hotdog;
+package com.raindown.tests.sciprt.hotdog;
 
 import cn.hutool.core.date.DateUtil;
 import com.alibaba.fastjson.JSON;

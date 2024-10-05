@@ -54,6 +54,16 @@
             <artifactId>wxpusher-java-sdk</artifactId>
             <version>2.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.aviator</groupId>
+            <artifactId>aviator</artifactId>
+            <version>5.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.0.5</version> <!-- 请检查最新版本 -->
+        </dependency>
     </dependencies>
 
 </project>

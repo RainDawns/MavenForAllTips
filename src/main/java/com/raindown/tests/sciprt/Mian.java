@@ -1,121 +1,14 @@
-package com.raindown.tests;
-
-import com.google.common.collect.ForwardingIterator;
-import com.google.errorprone.annotations.Var;
+package com.raindown.tests.sciprt;
 
 import java.util.*;
 
 /**
  * @author: RainDown
- * @description: TODO
  * @date: 2023/12/14 19:00
  * @version: 1.0
  */
 public class Mian {
-//    public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        int count = in.nextInt();
-//        TreeMap<Integer, String> map = new TreeMap<>();
-//        for (int i = 0; i < count; i++) {
-//            String name = in.next();
-//            int price = in.nextInt();
-//            map.put(price, name);
-//        }
-//        Set<Map.Entry<Integer, String>> entries = map.entrySet();
-//        for (Map.Entry<Integer, String> entry:entries){
-//            System.out.println(entry.getValue());
-//        }
-//
-//    }
 
-
-//    public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        String s = in.nextLine();
-//        boolean flag = isBalanced(s);
-//        if (flag) {
-//            System.out.println("YES");
-//        } else {
-//            System.out.println("NO");
-//        }
-//
-//    }
-//
-//    public static boolean isBalanced(String str) {
-//        int length = str.length();
-//        if (length < 2) {
-//            return false;
-//        }
-//        int index = length / 2;
-//
-//        int leftValue = getResult(str.substring(0, index));
-//        int rightValue = getResult(str.substring(index, length));
-//        while (index > 0 && index < length) {
-//            int value = Integer.valueOf(str.substring(index, index + 1));
-//            if (value==0 && leftValue==0){
-//                return true;
-//            }else if (value==0 && leftValue!=0){
-//                return false;
-//            }
-//            if (leftValue == rightValue) {
-//                return true;
-//            } else if (leftValue > rightValue) {
-//                index--;
-//                leftValue=leftValue/value;
-//                rightValue=rightValue*value;
-//            } else if (leftValue < rightValue) {
-//                index++;
-//                leftValue=leftValue*value;
-//                rightValue=rightValue/value;
-//            }
-//        }
-//        return false;
-//    }
-//
-//    public static int getResult(String str) {
-//        int result = 1;
-//        for (int i = 0; i < str.length(); i++) {
-//            result = result * Integer.valueOf(str.substring(i, i + 1));
-//        }
-//
-//        return result;
-//    }
-
-    //    public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        int times = in.nextInt();
-//        int count = in.nextInt();
-//        int length = in.nextInt();
-//        ArrayList<Integer> list = new ArrayList<>(times);
-//        for (int i = 0; i <times ; i++) {
-//            list.add(in.nextInt());
-//        }
-//        int left= 0 ;
-//        int right=length;
-//        int result=0;
-//        if (right<=list.size()){
-//            System.out.println(getMax(list,left,list.size()-1,count));
-//            return;
-//        }
-//        while (right<list.size()){
-//            int values = getMax(list, left, right, count);
-//            if (result<values){
-//                result=values;
-//            }
-//            right++;
-//            left++;
-//        }
-//        System.out.println(result);
-//    }
-//    public static int getMax(List<Integer> list,int left,int right,int count){
-//        int result=1;
-//        List<Integer> l = list.subList(left, right+1);
-//        l.sort(Integer::compareTo);
-//        for (int i = l.size()-count; i < l.size(); i++) {
-//            result=result*list.get(i);
-//        }
-//        return result;
-//    }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();

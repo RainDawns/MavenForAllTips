@@ -1,4 +1,4 @@
-package com.raindown.tests.five_ailiPay;
+package com.raindown.tests.sciprt.five_ailiPay;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
