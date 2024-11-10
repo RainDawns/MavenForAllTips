@@ -15,7 +15,7 @@ public class MoreSyncThread<T,R> {
 
     /**
      * @description:  分批次异步执行相关耗时操作并返回相关结果
-     * @author: luoNe_ngHai
+     * @author: lnh
      * @param list 需要的分批处理的数据
      * @param function 对数据处理的方式  输入值为list   输出值为list<R>
      * @param size  将数据分批  其中每一批的数据量
@@ -54,20 +54,5 @@ public class MoreSyncThread<T,R> {
         return finalResultList;
     }
 
-    public  static  void  getNextValue(String str){
-        ThreadPoolExecutor pool = new ThreadPoolExecutor(5,
-                15, 2, TimeUnit.SECONDS, new ArrayBlockingQueue(10000),new ThreadPoolExecutor.AbortPolicy());
-        pool.execute(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println(str);
-            }
-        });
-        pool.shutdown();
-    }
 
-    public static void main(String[] args) {
-        getNextValue("str");
-        ConcurrentHashMap<Object, Object> objectObjectConcurrentHashMap = new ConcurrentHashMap<>();
-    }
 }

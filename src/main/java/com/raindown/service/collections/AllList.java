@@ -1,8 +1,7 @@
 package com.raindown.service.collections;
 
-import com.raindown.model.UserDO;
 import com.raindown.model.DeptDto;
-
+import com.raindown.model.UserDO;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,11 +6,9 @@ import com.zjiecode.wxpusher.client.WxPusher;
 import com.zjiecode.wxpusher.client.bean.Message;
 import com.zjiecode.wxpusher.client.bean.MessageResult;
 import com.zjiecode.wxpusher.client.bean.Result;
-import okhttp3.*;
 
 import java.io.IOException;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.raindown.interview;
+package com.raindown.service;
 
 /**
  * date: 2024/4/26
@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 实时计算所有订单中当前的最大价格、最小价格和平均价格
  * 请尽可能地降低复杂度
  */
-public class Main {
+public class OrderService {
 
     //1kw  100条   8.全部发？  拿出来放redis?  一波一波拿肯定不对   线程池  并发拿
     // 下游无限制    需不需要处理下游返回结果(有多少条失败？)

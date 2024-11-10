@@ -1,7 +1,5 @@
 package com.raindown.codeview.link;
 
-import java.util.zip.CheckedInputStream;
-
 /**
  * date: 2024/4/30
  *
@@ -10,9 +8,9 @@ import java.util.zip.CheckedInputStream;
 public abstract class Minhandler {
     private Minhandler next;
 
-    public Minhandler link(Minhandler first,Minhandler... chain){
+    public Minhandler link(Minhandler first, Minhandler... chain) {
         Minhandler head = first;
-        for (Minhandler nextInChain: chain) {
+        for (Minhandler nextInChain : chain) {
             head.next = nextInChain;
             head = nextInChain;
         }
@@ -24,7 +22,8 @@ public abstract class Minhandler {
      */
     public abstract boolean check(String email, String password);
 
-    /**~
+    /**
+     * ~
      * Runs check on the next object in chain or ends traversing if we're in
      * last object in chain.
      */
